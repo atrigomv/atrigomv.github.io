@@ -23,5 +23,8 @@ Bingo! It is possible to do login into the host using "togie" user and "12345" p
 
 ```
 perl -e 'exec "/bin/sh";'
-```
 
+```
+When I got a handly shell, I discovered the next trouble which didn't allow me to perform a privilege escalation attack: the machine was not installed GCC compiler and I was not able to install it due to lack permission. So, I had three options: to looking for privilege escalation exploit for 4.4.0 kernel version written in python or perl, translate one of the exploits written in C language to python or perl or, the easier way, deploy a Ubuntu machine in my lab with the exact kernel version of the victim machine and try to compile in it one of the C language-based exploits. Although the first two options are obviously cooler and more "hacker style", I chose the last option and compile a version of [Dirty-COW attack](https://github.com/dirtycow/dirtycow.github.io/wiki/PoCs) into a new machine. Then, I started an Apache service and, within the victim machine, I retrieved the binary using "wget" command. Finally, the Dirty-COW exploit was executed successfully, and I got a valid user called "firefart" with root privileges who I used to retrieved the root flag:
+
+![evidence5]({{ site.baseurl }}/images/lazysysadminI_05.png)
