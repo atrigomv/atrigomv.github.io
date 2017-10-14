@@ -19,4 +19,4 @@ I tried to use this user within Wordpress and PHPMyAdmin private login form but 
 
 ![evidence4]({{ site.baseurl }}/images/lazysysadminI_04.png)
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+Bingo! It is possible to do login into the host using "togie" user and "12345" password through ssh service. Once I got a shell, the first step was discover the type of Unix distro deployed and the exactly kernel version used. Unfortunately, "togie" user had a restricted shell which didn't allow me execute most of unix commands so, the first step was try to evade that restriction. To do that, I detected that "togie" user was allowed to execute perl code, so executing the next line I could obtain an un-restricted shell:
