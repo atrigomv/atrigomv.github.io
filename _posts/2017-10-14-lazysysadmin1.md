@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Vulnhub: LazySysAdmin: 1
+title: Vulnhub LazySysAdmin 1
 ---
 
-This is pretend to be the walkthrough of LazySysAdmin vulnhub machine. As every penetration test, the first step was to make a ports and service discovery in order to detect misconfigured or vulnerable applications running on the server.
+This pretend to be the walkthrough of LazySysAdmin vulnhub machine. As every penetration test, the first step was to make a ports and service discovery in order to detect misconfigured or vulnerable applications running on the server.
 
 ![_config.yml]({{ site.baseurl }}/images/config.png)
 
