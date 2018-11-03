@@ -10,3 +10,8 @@ One of the most important projects that I working on is, in point of fact, the c
 * "POST" HTTP method is used to add new objects (scans, folders...), "GET" is used to list objects and "DELETE" to delete objects (easy? :P)
 * All this requests has to be authenticated. To do this, the best method is using a pair of akey and skey instead of create new sessions with "POST session" method which is deprecated.
 * To execute some methods you should attach as a payload the UUID identificator of your Nessus scanner. To retrieve it, you have to execute before it the next request:
+```
+r = r.get_post('https://127.0.0.1/scanner')
+```
+
+Finally, I've done a PoC script which configure a local Nessus scanner, create a new scanner, launch it and recover the scan_id for further actions. The script can be downloaded here.
