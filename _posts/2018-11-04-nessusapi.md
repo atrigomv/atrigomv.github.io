@@ -14,4 +14,4 @@ One of the most important projects that I working on is, in point of fact, the c
 r = r.get_post('https://127.0.0.1/scanner')
 ```
 
-Finally, I've done a PoC script which configure a local Nessus scanner, create a new scanner, launch it and recover the scan_id for further actions. The script can be downloaded here.
+Finally, I've done a PoC script which configure a local Nessus scanner, create a new scanner, launch it and recover the scan_id for further actions. The script can be downloaded [here](https://raw.githubusercontent.com/atrigomv/devsecops/master/devsecops.py).
