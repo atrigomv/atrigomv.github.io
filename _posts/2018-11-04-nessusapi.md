@@ -49,5 +49,11 @@ try:
                 }
                 return ret
 ```
-
-Finally, I've done a PoC script which configure a local Nessus scanner, create a new scanner, launch it and recover the scan_id for further actions. The script can be downloaded [here](https://raw.githubusercontent.com/atrigomv/devsecops/master/devsecops.py).
+* The last step to execute the scan is, once it is created, the launch. There is a specific request to do that task, but the scan ID of the new scan has to be got (it is retrieved in the JSON response of the launch POST request):
+```
+json_data = json.loads(r.text)
+id_scan = json_data['scan']
+id_scan = id_scan['id']
+print('[+] Scan created with ID ' + str(id_scan) + '. Lauching scan...')
+```
+I've done a PoC script which configure a local Nessus scanner, create a new scanner, launch it and recover the scan_id for further actions. The script can be downloaded [here](https://raw.githubusercontent.com/atrigomv/devsecops/master/devsecops.py).
