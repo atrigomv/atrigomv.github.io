@@ -56,4 +56,4 @@ id_scan = json_data['scan']
 id_scan = id_scan['id']
 print('[+] Scan created with ID ' + str(id_scan) + '. Lauching scan...')
 ```
-I've done a PoC script which configure a local Nessus scanner, create a new scanner, launch it and recover the scan_id for further actions. The script can be downloaded [here](https://raw.githubusercontent.com/atrigomv/devsecops/master/devsecops.py).
+I've done a PoC script which configure a local Nessus scanner, create a new scanner, launch it and recover the scan_id for further actions. The script can be downloaded [here](https://github.com/atrigomv/devsecops/blob/master/nessus_api.py).
